@@ -1,5 +1,110 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    /*outline: auto;*/
+}
+@font-face {
+    font-family: norse-bold;
+    src: url(/fonts/Norse-Bold.otf);
 }
 
+
+body {
+    display: flex;
+    font-family: system-ui, sans-serif;
+    background-color: aliceblue;
+}
+
+.left-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 30vw;
+    background-image: url(/images/fern.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.odin-logo{
+    font-family: norse-bold;
+    color: white;
+    text-align: center;
+    margin-top: 25vh;
+    font-size: max(72px, 10vh);
+}
+
+.logo{
+    height: max(72px, 10vh);
+    width: auto;
+}
+
+.right-container{
+    height: 100vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    padding-left: 0;
+}
+
+.main-text{
+    font-size: 20px;
+    padding-right: min(400px, 20vw);
+    padding-left: 5vw;
+}
+
+.form-container{
+    background-color: white;
+    box-shadow: 0px 5px 5px darkgrey;
+    height: 25vh;
+    padding-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.action-call{
+    font-size: 20px;
+}
+
+.container-group{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.input-field{
+    display: flex;
+    flex-direction: column;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+label{
+    font-size: 10px;
+    color: darkslategray;
+}
+.submit-button{
+    margin: 2.5vh 5vw;
+}
+
+.login-text{
+    padding-left: 5vw;
+}
+
+@media screen and (max-width: 750px) {
+    .main-text {
+        padding-right: 5vw;
+    }
+
+    .odin-logo{
+        font-size: 0;
+    }
+}
