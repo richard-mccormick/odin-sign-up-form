@@ -39,7 +39,8 @@
                     </div>
                     <div class="input-field">
                         <label for="phone-number">PHONE NUMBER</label>
-                        <input type="tel" id="phone-number" name="phone-number">
+                        <input type="tel" id="phone-number" name="phone-number" 
+                        onInput="this.value = phoneNumberFormat(this.value)" required>
                     </div>
                 </div>
                 <div class="container-group">
