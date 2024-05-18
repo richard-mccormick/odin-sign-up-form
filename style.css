@@ -9,6 +9,11 @@
     src: url(/fonts/Norse-Bold.otf);
 }
 
+a {
+    text-decoration: none;
+    color: #596D48;
+    font-weight: bold;
+}
 
 body {
     display: flex;
@@ -25,6 +30,8 @@ body {
     background-image: url(/images/fern.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    color: white;
+    text-align: center;
 }
 
 .odin-logo{
@@ -33,11 +40,17 @@ body {
     text-align: center;
     margin-top: 25vh;
     font-size: max(72px, 10vh);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 5px;
 }
 
 .logo{
     height: max(72px, 10vh);
     width: auto;
+}
+
+.attribution {
+    padding: 5px 5px;
 }
 
 .right-container{
@@ -52,18 +65,18 @@ body {
 
 .main-text{
     font-size: 20px;
-    padding-right: min(400px, 20vw);
-    padding-left: 5vw;
+    padding: 0 min(400px, 20vw) 5vh 5vw;
 }
 
 .form-container{
     background-color: white;
     box-shadow: 0px 5px 5px darkgrey;
-    height: 25vh;
+    height: 250px;
     padding-left: 5vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 15px;
 }
 
 .action-call{
@@ -73,7 +86,7 @@ body {
 .container-group{
     display: flex;
     justify-content: flex-start;
-    gap: 20px;
+    gap: max(5vw, 20px);
 }
 
 .input-field{
@@ -81,15 +94,23 @@ body {
     flex-direction: column;
 }
 
-input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button{
-    -webkit-appearance: none;
-    margin: 0;
+input{
+    padding: 2px;
+    border-radius: 2px;
+    outline: none;
+    border: 1px solid #323233;
 }
+
+input:focus{
+   outline: none;
+   border: solid 1px blue;
+   box-shadow: 0 3px 10px darkgray;
+}
+
 
 label{
     font-size: 10px;
-    color: darkslategray;
+    color: rgb(15, 26, 26);
 }
 .submit-button{
     margin: 2.5vh 5vw;
@@ -99,12 +120,44 @@ label{
     padding-left: 5vw;
 }
 
-@media screen and (max-width: 750px) {
+.submit-button{
+    width: 150px;
+    height: 35px;
+    font-weight: bold;
+    color: white;
+    background-color: #596D48;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px darkgrey;
+    transition-duration: .2s;
+    
+}
+
+.submit-button:hover {
+    color: #596D48;
+    background-color: white;
+    border: solid 1px #596D48;
+}
+
+.submit-button:active {
+    transform: translateY(4px);
+}
+@media screen and (max-width: 800px) {
     .main-text {
         padding-right: 5vw;
     }
 
+
     .odin-logo{
         font-size: 0;
+        background-color: rgb(15, 26, 26, 0)
+    }
+
+    .form-container{
+        height: 500px;
+    }
+
+    .container-group{
+        flex-wrap: wrap;
     }
 }
