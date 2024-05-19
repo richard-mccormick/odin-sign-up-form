@@ -15,3 +15,20 @@ function phoneNumberFormat(input) {
     }
     return input;
 }
+
+const password = document.querySelector("#password");
+const passConfirm = document.querySelector("#password-confirm");
+const passValidation = document.querySelector("#pass-validation");
+function passCheck(pass, confirm) {
+    if (pass.value === confirm.value) {
+        passValidation.textContent = "";
+        pass.style.border = "1px solid blue";
+        passConfirm.style.border = "1px solid blue";
+    } else {
+        passValidation.textContent = "* passwords do not match";
+        pass.style.border = "1px solid red";
+        passConfirm.style.border = "1px solid red";
+    }
+}
+
+

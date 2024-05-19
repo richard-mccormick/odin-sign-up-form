@@ -46,11 +46,14 @@
                 <div class="container-group">
                     <div class="input-field">
                         <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password">
+                        <input type="password" id="password" name="password" 
+                        onkeyup="passCheck(password, passConfirm)">
+                        <div class="pass-validation" id="pass-validation"></div>
                     </div>
                     <div class="input-field">
                         <label for="password-confirm">CONFIRM PASSWORD</label>
-                        <input type="password" id="password-confirm" name="password-confirm">
+                        <input type="password" id="password-confirm" name="password-confirm" 
+                        onkeyup="passCheck(password, passConfirm)">
                     </div>
                 </div>
                 
